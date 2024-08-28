@@ -1,0 +1,132 @@
+
+{
+    "type" : "record",
+    "name" : "NET_TG_SERVICE_REQUEST_CORR",
+    "namespace" : "correlation.v1.v1",
+    "fields" : [
+        {
+            "name" : "_NE",
+            "type" : "string"
+        },
+        {
+            "name" : "_TIMESTAMP",
+            "type" : "long"
+        },
+        {
+            "name" : "DURATION",
+            "type" : "int"
+        },
+        {
+            "name" : "IMSI",
+            "type" : "int"
+        },
+        {
+            "name" : "IMEISV",
+            "type" : "int"
+        },
+        {
+            "name" : "IMEITAC",
+            "type" : "int"
+        },
+        {
+            "name" : "ENB_ID",
+            "type" : "int"
+        },
+        {
+            "name" : "CELL_ID",
+            "type" : "int"
+        },
+        {
+            "name" : "PAGING_ATTEMPTS",
+            "type" : "int"
+        },
+        {
+            "name" : "PAGING",
+            "type" : "boolean"
+        },
+        {
+            "name" : "RESULT",
+            "type" : "string"
+        },
+        {
+            "name" : "MME_CAUSE_CODE",
+            "type" : "string"
+        },
+        {
+            "name" : "MME_SUB_CAUSE_CODE",
+            "type" : "string"
+        },
+        {
+            "name" : "MME_CAUSE_PROT_TYPE",
+            "type" : "string"
+        },
+        {
+            "name" : "TYPE",
+            "type" : "string"
+        },
+        {
+            "name" : "MTMSI",
+            "type" : "int"
+        },
+        {
+            "name" : "ECI",
+            "type" : "int"
+        },
+        {
+            "name" : "MCC",
+            "type" : "long"
+        },
+        {
+            "name" : "MNC",
+            "type" : "long"
+        },
+        {
+            "name" : "TAC",
+            "type" : "int"
+        },
+        {
+            "name" : "APN",
+            "type" : "string"
+        },
+        {
+            "name" : "MMEGI",
+            "type" : "int"
+        },
+        {
+            "name" : "MMEC",
+            "type" : "int"
+        },
+        {
+            "name" : "SGW_ADDR",
+            "type" : "string"
+        },
+        {
+            "name" : "UE_ADDR",
+            "type" : "string"
+        },
+        {
+            "name" : "EPS_BEARER_ID",
+            "type" : "int"
+        },
+        {
+            "name" : "BEARER_QCI",
+            "type" : "int"
+        },
+        {
+            "name" : "BEARER_CAUSE",
+            "type" : "int"
+        },
+        {
+            "name" : "DEFAULT_BEARER_ID",
+            "type" : "int"
+        },
+        {
+            "name" : "END_TIMESTAMP",
+            "type" : "long"
+        },
+        {
+            "name" : "CORRELATION_TIME",
+            "type" : "long"
+        }
+    ]
+}

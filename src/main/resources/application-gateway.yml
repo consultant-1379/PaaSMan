@@ -1,0 +1,48 @@
+gateway:
+  cdsv3.url: http://${gateway.host}:8889
+  static.resource.path: /data/aia-sdk-paas-manager/static/
+zuul:
+  host.socket-timeout-millis: 60000
+  routes:
+
+#   Expose template manager
+    templatemanager:
+      path: /templatemanager/**
+      url: http://${gateway.host}:8889
+
+#   Expose wordpress deployment
+    wordpress:
+      path: /wordpress/**
+      url: http://atrcxb2994.athtem.eei.ericsson.se:23307
+
+#   Expose wordpress deployment
+    piwik:
+      path: /piwik/**
+      url: http://atrcxb2994.athtem.eei.ericsson.se:23308/piwik
+
+#   Suppose to leverage service discovery to access the internal services
+    marathon:
+      path: /marathon/**
+      url: ${paas.marathon.url}
+
+#   Suppose to leverage service discovery to access paas manager backend
+    paas:
+      path: /paas/**
+      url: ${paas.url}
+
+#   To access legacy paas api
+    paas-legacy-api-templates:
+      path: /templates/**
+      url: ${paas.url}/legacy/templates
+    paas-legacy-api-integration_points:
+      path: /integration_points/**
+      url: ${paas.url}/legacy/integration_points
+    paas-legacy-api-extension_points:
+      path: /extension_points/**
+      url: ${paas.url}/legacy/extension_points
+    paas-legacy-api-applications:
+      path: /applications/**
+      url: ${paas.url}/legacy/applications
+    paas-legacy-dist:
+      path: /dist/**
+      url: ${paas.url}/legacy/dist

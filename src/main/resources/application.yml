@@ -1,0 +1,20 @@
+server.port: 8888
+management:
+  context-path: /v1/serviceability
+  add-application-context-header: false
+server.tomcat.accesslog:
+  enabled: true
+  directory: /data/aia-sdk-paas-manager/logs
+  pattern: "%h %l %u %t \"%r\" %s %b \"%{Referer}i\" \"%{User-Agent}i\" \"%{X-Forwarded-For}i\"" #https://tomcat.apache.org/tomcat-7.0-doc/api/org/apache/catalina/valves/AccessLogValve.html
+store.maven:
+  repo-url: https://arm101-eiffel004.lmera.ericsson.se:8443/nexus/content/repositories/aia-releases
+  local-dir: /data/aia-sdk-paas-manager/maven-store
+  reload-on-load: true
+  async-reload: false
+  cache-in-minutes: 60
+gateway:
+  host: ${host:localhost}
+  url: http://${gateway.host}
+paas:
+  host: ${gateway.host}
+  url: http://${paas.host}

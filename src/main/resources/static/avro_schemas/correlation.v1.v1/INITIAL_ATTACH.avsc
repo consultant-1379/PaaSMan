@@ -1,0 +1,140 @@
+
+{
+    "type" : "record",
+    "name" : "INITIAL_ATTACH",
+    "namespace" : "correlation.v1.v1",
+    "fields" : [
+        {
+            "name" : "_NE",
+            "type" : "string"
+        },
+        {
+            "name" : "_TIMESTAMP",
+            "type" : "long"
+        },
+        {
+            "name" : "START_TIMESTAMP",
+            "type" : "long"
+        },
+        {
+            "name" : "END_TIMESTAMP",
+            "type" : "long"
+        },
+        {
+            "name" : "IMSI",
+            "type" : "int"
+        },
+        {
+            "name" : "IMEISV",
+            "type" : "int"
+        },
+        {
+            "name" : "IMEITAC",
+            "type" : "int"
+        },
+        {
+            "name" : "MTMSI",
+            "type" : "int"
+        },
+        {
+            "name" : "ENBS1APID",
+            "type" : "int"
+        },
+        {
+            "name" : "MMES1APID",
+            "type" : "int"
+        },
+        {
+            "name" : "GUMMEI",
+            "type" : "string"
+        },
+        {
+            "name" : "RAC_UE_REF",
+            "type" : "int"
+        },
+        {
+            "name" : "GLOBAL_CELL_ID",
+            "type" : "int"
+        },
+        {
+            "name" : "ATTACH_TYPE",
+            "type" : "string"
+        },
+        {
+            "name" : "RESULT",
+            "type" : "string"
+        },
+        {
+            "name" : "ENB_RESULT",
+            "type" : "string"
+        },
+        {
+            "name" : "MME_RESULT",
+            "type" : "string"
+        },
+        {
+            "name" : "ENB_RESULT_CAUSE",
+            "type" : "string"
+        },
+        {
+            "name" : "MME_CAUSE_CODE",
+            "type" : "string"
+        },
+        {
+            "name" : "MME_SUB_CAUSE_CODE",
+            "type" : "string"
+        },
+        {
+            "name" : "MME_CAUSE_PROT_TYPE",
+            "type" : "string"
+        },
+        {
+            "name" : "MCC",
+            "type" : "long"
+        },
+        {
+            "name" : "MNC",
+            "type" : "long"
+        },
+        {
+            "name" : "TAC",
+            "type" : "int"
+        },
+        {
+            "name" : "MME_NAME",
+            "type" : "string"
+        },
+        {
+            "name" : "MSISDN",
+            "type" : "string"
+        },
+        {
+            "name" : "APN",
+            "type" : "string"
+        },
+        {
+            "name" : "SGW_ADDR",
+            "type" : "string"
+        },
+        {
+            "name" : "PDNS_P_GW",
+            "type" : "string"
+        },
+        {
+            "name" : "UE_ADDR",
+            "type" : "string"
+        },
+        {
+            "name" : "QCI",
+            "type" : "int"
+        },
+        {
+            "name" : "ID",
+            "type" : "int"
+        },
+        {
+            "name" : "CAUSE",
+            "type" : "int"
+        }
+    ]
+}

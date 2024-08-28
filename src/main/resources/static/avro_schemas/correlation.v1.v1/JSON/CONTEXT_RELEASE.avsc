@@ -1,0 +1,116 @@
+
+{
+    "type" : "record",
+    "name" : "CONTEXT_RELEASE",
+    "namespace" : "correlation.v1.v1",
+    "fields" : [
+        {
+            "name" : "_NE",
+            "type" : "string"
+        },
+        {
+            "name" : "_TIMESTAMP",
+            "type" : "long"
+        },
+        {
+            "name" : "DURATION",
+            "type" : "int"
+        },
+        {
+            "name" : "END_TIMESTAMP",
+            "type" : "long"
+        },
+        {
+            "name" : "IMSI",
+            "type" : "string"
+        },
+        {
+            "name" : "IMEISV",
+            "type" : "string"
+        },
+        {
+            "name" : "RESULT",
+            "type" : "long"
+        },
+        {
+            "name" : "ENB_RESULT",
+            "type" : "long"
+        },
+        {
+            "name" : "MME_RESULT",
+            "type" : "long"
+        },
+        {
+            "name" : "ENB_RESULT_CAUSE",
+            "type" : "long"
+        },
+        {
+            "name" : "MME_CAUSE_CODE",
+            "type" : "int"
+        },
+        {
+            "name" : "MME_SUB_CAUSE_CODE",
+            "type" : "int"
+        },
+        {
+            "name" : "MME_CAUSE_PROT_TYPE",
+            "type" : "int"
+        },
+        {
+            "name" : "MTMSI",
+            "type" : "int"
+        },
+        {
+            "name" : "MMEC",
+            "type" : "int"
+        },
+        {
+            "name" : "ENBS1APID",
+            "type" : "int"
+        },
+        {
+            "name" : "MMES1APID",
+            "type" : "int"
+        },
+        {
+            "name" : "EVENT_NAME",
+            "type" : "string"
+        },
+        {
+            "name" : "TIME_REL",
+            "type" : "double"
+        },
+        {
+            "name" : "MILESTONE_NAME",
+            "type" : "string"
+        },
+        {
+            "name" : "MILESTONE_TIMESTAMP",
+            "type" : "long"
+        },
+        {
+            "name" : "CELL_ID",
+            "type" : "int"
+        },
+        {
+            "name" : "ENB_ID",
+            "type" : "int"
+        },
+        {
+            "name" : "GUMMEI",
+            "type" : "bytes"
+        },
+        {
+            "name" : "APN",
+            "type" : "string"
+        },
+        {
+            "name" : "TRIGGERING_NODE",
+            "type" : "int"
+        },
+        {
+            "name" : "RELEASE_CAUSE",
+            "type" : "int"
+        }
+    ]
+}

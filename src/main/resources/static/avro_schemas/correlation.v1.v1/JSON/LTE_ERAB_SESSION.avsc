@@ -1,0 +1,92 @@
+
+{
+    "type" : "record",
+    "name" : "LTE_ERAB_SESSION",
+    "namespace" : "correlation.v1.v1",
+    "fields" : [
+        {
+            "name" : "_NE",
+            "type" : "string"
+        },
+        {
+            "name" : "_TIMESTAMP",
+            "type" : "long"
+        },
+        {
+            "name" : "START_TIME",
+            "type" : "long"
+        },
+        {
+            "name" : "END_TIME",
+            "type" : "long"
+        },
+        {
+            "name" : "DURATION",
+            "type" : "int"
+        },
+        {
+            "name" : "IMSI",
+            "type" : "int"
+        },
+        {
+            "name" : "IMEISV",
+            "type" : "int"
+        },
+        {
+            "name" : "TAC",
+            "type" : "int"
+        },
+        {
+            "name" : "BEARER_ID",
+            "type" : "int"
+        },
+        {
+            "name" : "BEARER_TYPE",
+            "type" : "int"
+        },
+        {
+            "name" : "ERAB_ID",
+            "type" : "int"
+        },
+        {
+            "name" : "TOTAL_SAMPLES",
+            "type" : "int"
+        },
+        {
+            "name" : "PDCP_ACKVOL_DL_PER_RB",
+            "type" : "int"
+        },
+        {
+            "name" : "PDCP_TRANSVOL_DL_PER_RB",
+            "type" : "int"
+        },
+        {
+            "name" : "PDCP_RECVOL_UL_PER_RB",
+            "type" : "int"
+        },
+        {
+            "name" : "LATENCY_DL_PER_RB",
+            "type" : "double"
+        },
+        {
+            "name" : "MAX_LATENCY_DL_PER_RB",
+            "type" : "double"
+        },
+        {
+            "name" : "LATENCY_DL_SAMPLES_PER_RB",
+            "type" : "int"
+        },
+        {
+            "name" : "RLC_DELAY_DL_PER_RB",
+            "type" : "double"
+        },
+        {
+            "name" : "MAX_RLC_DELAY_DL_PER_RB",
+            "type" : "double"
+        },
+        {
+            "name" : "RLC_DELAY_DL_SAMPLES_PER_RB",
+            "type" : "int"
+        }
+    ]
+}

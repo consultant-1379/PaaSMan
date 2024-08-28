@@ -1,0 +1,312 @@
+
+{
+    "type" : "record",
+    "name" : "S1_HANDOVER",
+    "namespace" : "correlation.v1.v1",
+    "fields" : [
+        {
+            "name" : "_NE",
+            "type" : "string"
+        },
+        {
+            "name" : "_TIMESTAMP",
+            "type" : "long"
+        },
+        {
+            "name" : "DURATION",
+            "type" : "int"
+        },
+        {
+            "name" : "END_TIMESTAMP",
+            "type" : "long"
+        },
+        {
+            "name" : "IMSI",
+            "type" : "string"
+        },
+        {
+            "name" : "IMEISV",
+            "type" : "string"
+        },
+        {
+            "name" : "IMEITAC",
+            "type" : "string"
+        },
+        {
+            "name" : "MME_HO_TYPE",
+            "type" : "string"
+        },
+        {
+            "name" : "RESULT",
+            "type" : "long"
+        },
+        {
+            "name" : "ENB_RESULT",
+            "type" : "long"
+        },
+        {
+            "name" : "MME_RESULT",
+            "type" : "long"
+        },
+        {
+            "name" : "MME_CAUSE_CODE",
+            "type" : "int"
+        },
+        {
+            "name" : "MME_SUB_CAUSE_CODE",
+            "type" : "int"
+        },
+        {
+            "name" : "MME_CAUSE_PROT_TYPE",
+            "type" : "int"
+        },
+        {
+            "name" : "HO_CAUSE",
+            "type" : "int"
+        },
+        {
+            "name" : "ENB_SRC_HO_PREP_RESULT",
+            "type" : "int"
+        },
+        {
+            "name" : "ENB_TRG_HO_PREP_RESULT",
+            "type" : "int"
+        },
+        {
+            "name" : "ENB_SRC_HO_EXEC_RESULT",
+            "type" : "int"
+        },
+        {
+            "name" : "ENB_TRG_HO_EXEC_RESULT",
+            "type" : "int"
+        },
+        {
+            "name" : "TARGET_SELECTION_TYPE",
+            "type" : "int"
+        },
+        {
+            "name" : "HO_ATTEMPT_CAUSE",
+            "type" : "int"
+        },
+        {
+            "name" : "RANDOM_ACCESS_TYPE",
+            "type" : "int"
+        },
+        {
+            "name" : "ENB_ID_SOURCE",
+            "type" : "int"
+        },
+        {
+            "name" : "ENBS1APID_SOURCE",
+            "type" : "int"
+        },
+        {
+            "name" : "MMES1APID_SOURCE",
+            "type" : "int"
+        },
+        {
+            "name" : "CELL_ID_SOURCE",
+            "type" : "int"
+        },
+        {
+            "name" : "GUMMEI_SOURCE",
+            "type" : "bytes"
+        },
+        {
+            "name" : "MCC_SOURCE",
+            "type" : "long"
+        },
+        {
+            "name" : "MNC_SOURCE",
+            "type" : "long"
+        },
+        {
+            "name" : "TAC_SOURCE",
+            "type" : "int"
+        },
+        {
+            "name" : "MTMSI_SOURCE",
+            "type" : "int"
+        },
+        {
+            "name" : "ECI_SOURCE",
+            "type" : "int"
+        },
+        {
+            "name" : "MMEGI_SOURCE",
+            "type" : "int"
+        },
+        {
+            "name" : "RSRQ_SOURCE",
+            "type" : "int"
+        },
+        {
+            "name" : "RSRP_SOURCE",
+            "type" : "int"
+        },
+        {
+            "name" : "SGSN_ADDR_V4_SOURCE",
+            "type" : "string"
+        },
+        {
+            "name" : "SGSN_ADDR_V6_SOURCE",
+            "type" : "string"
+        },
+        {
+            "name" : "SGW_ADDR_V4_SOURCE",
+            "type" : "string"
+        },
+        {
+            "name" : "SGW_ADDR_V6_SOURCE",
+            "type" : "string"
+        },
+        {
+            "name" : "RAC_UE_REF_SOURCE",
+            "type" : "int"
+        },
+        {
+            "name" : "CGI_SOURCE",
+            "type" : "bytes"
+        },
+        {
+            "name" : "PCI",
+            "type" : "int"
+        },
+        {
+            "name" : "ENB_ID_TARGET",
+            "type" : "int"
+        },
+        {
+            "name" : "CELL_ID_TARGET",
+            "type" : "int"
+        },
+        {
+            "name" : "GUMMEI_TARGET",
+            "type" : "bytes"
+        },
+        {
+            "name" : "ENBS1APID_TARGET",
+            "type" : "int"
+        },
+        {
+            "name" : "MMES1APID_TARGET",
+            "type" : "int"
+        },
+        {
+            "name" : "RAC_UE_REF_TARGET",
+            "type" : "int"
+        },
+        {
+            "name" : "ECI_TARGET",
+            "type" : "int"
+        },
+        {
+            "name" : "MCC_TARGET",
+            "type" : "long"
+        },
+        {
+            "name" : "MNC_TARGET",
+            "type" : "long"
+        },
+        {
+            "name" : "TAC_TARGET",
+            "type" : "int"
+        },
+        {
+            "name" : "CGI_TARGET",
+            "type" : "bytes"
+        },
+        {
+            "name" : "RSRP_TARGET",
+            "type" : "int"
+        },
+        {
+            "name" : "RSRQ_TARGET",
+            "type" : "int"
+        },
+        {
+            "name" : "SGSN_ADDR_V4_OLD",
+            "type" : "string"
+        },
+        {
+            "name" : "SGSN_ADDR_V6_OLD",
+            "type" : "string"
+        },
+        {
+            "name" : "SGW_ADDR_V4_OLD",
+            "type" : "string"
+        },
+        {
+            "name" : "SGW_ADDR_V6_OLD",
+            "type" : "string"
+        },
+        {
+            "name" : "DEFAULT_EPS_BEARER_ID",
+            "type" : "int"
+        },
+        {
+            "name" : "BEARERS_DEFAULT_EPS_BEARER_ID",
+            "type" : "int"
+        },
+        {
+            "name" : "BEARERS_BEARER_QCI",
+            "type" : "int"
+        },
+        {
+            "name" : "BEARER_CAUSE",
+            "type" : "int"
+        },
+        {
+            "name" : "BEARERS_DEFAULT_BEARER_ID",
+            "type" : "int"
+        },
+        {
+            "name" : "MME_PDN_INFO_DEFAULT_BEARER_ID",
+            "type" : "int"
+        },
+        {
+            "name" : "PDNS_PAA_IPV4",
+            "type" : "string"
+        },
+        {
+            "name" : "PDNS_PAA_IPV6",
+            "type" : "string"
+        },
+        {
+            "name" : "PDNS_P_GW_IPV4",
+            "type" : "string"
+        },
+        {
+            "name" : "PDNS_P_GW_IPV6",
+            "type" : "string"
+        },
+        {
+            "name" : "HO_OUT_PREP_ERAB_REQ_BITMAP",
+            "type" : "int"
+        },
+        {
+            "name" : "HO_OUT_PREP_ERAB_FAIL_BITMAP",
+            "type" : "int"
+        },
+        {
+            "name" : "HO_OUT_EXEC_ERAB_REQ_BITMAP",
+            "type" : "int"
+        },
+        {
+            "name" : "HO_OUT_EXEC_ERAB_FAIL_BITMAP",
+            "type" : "int"
+        },
+        {
+            "name" : "HO_IN_PREP_ERAB_REQ_BITMAP",
+            "type" : "int"
+        },
+        {
+            "name" : "HO_IN_PREP_ERAB_SUCC_BITMAP",
+            "type" : "int"
+        },
+        {
+            "name" : "CORRELATION_TIME",
+            "type" : "long"
+        }
+    ]
+}

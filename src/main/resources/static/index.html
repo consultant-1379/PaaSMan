@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://cds.ericsson.se/workflow-automation.html -->
+<html data-ember-extension="1">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" href="./assets/1/css/assets.css">
+    <link rel="stylesheet" href="./assets/1/css/systemBar.css">
+    <title>CDS Portal</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="https://cds.ericsson.se/container/resources/container/favicon.ico">
+    <style>.eaPortal-text_bold {
+        font-weight: bold;
+    }
+
+    .eaPortal-plusIcon {
+        display: inline-block;
+        vertical-align: middle;
+        border: none;
+        height: 16px;
+        width: 16px;
+        line-height: 1.6rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
+        background-size: 100%;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
+        background-image: url('portal/resources/portal/plus_white_16px.svg');
+    }
+
+    .eaPortal .ebLoader-Dots_color_orange,
+    .eaPortal .ebLoader-Dots_color_orange:before,
+    .eaPortal .ebLoader-Dots_color_orange:after {
+        background-color: #f9d099;
+        -webkit-animation-name: ebLoader_pulseOrange;
+        -moz-animation-name: ebLoader_pulseOrange;
+        -ms-animation-name: ebLoader_pulseOrange;
+        animation-name: ebLoader_pulseOrange;
+    }
+
+    @-webkit-keyframes ebLoader_pulseOrange {
+        0% {
+            background-color: #f9d099;
+        }
+        25% {
+            background-color: #f3a133;
+        }
+        75% {
+            background-color: #f9d099;
+        }
+    }
+
+    @-moz-keyframes ebLoader_pulseOrange {
+        0% {
+            background-color: #f9d099;
+        }
+        25% {
+            background-color: #f3a133;
+        }
+        75% {
+            background-color: #f9d099;
+        }
+    }
+
+    @keyframes ebLoader_pulseOrange {
+        0% {
+            background-color: #f9d099;
+        }
+        25% {
+            background-color: #f3a133;
+        }
+        75% {
+            background-color: #f9d099;
+        }
+    }
+    </style>
+    <style>.elPortalLib-wAppLayout-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 0 12px 0;
+        border-bottom: 1px solid #cccccc;
+        background-color: #ffffff;
+        z-index: 1000;
+    }
+
+    .elPortalLib-wAppLayout-body {
+        position: absolute;
+        top: 90px;
+        width: 100%;
+        bottom: 0;
+        padding: 24px 0 0;
+    }
+    </style>
+    <style>.elPortalLib-wNavigationHeader {
+        width: 970px;
+        padding: 0 5%;
+        margin: 60px auto 0;
+    }
+
+    .elPortalLib-wNavigationHeader-brandStrip {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        z-index: 2000;
+        background: #0066b3;
+        background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #a1c517), color-stop(25%, #009045), color-stop(50%, #0082b6), color-stop(75%, #151f77), color-stop(100%, #db004f));
+        background: -webkit-linear-gradient(left, #a1c517 0%, #009045 25%, #0082b6 50%, #151f77 75%, #db004f 100%);
+        background: -moz-linear-gradient(left, #a1c517 0%, #009045 25%, #0082b6 50%, #151f77 75%, #db004f 100%);
+        background: -o-linear-gradient(left, #a1c517 0%, #009045 25%, #0082b6 50%, #151f77 75%, #db004f 100%);
+        background: linear-gradient(left, #a1c517 0%, #009045 25%, #0082b6 50%, #151f77 75%, #db004f 100%);
+    }
+
+    .elPortalLib-wNavigationHeaderTitle {
+        margin: 0 0 0 12px;
+        color: #00285e;
+        font-weight: normal;
+        font-size: 2.4rem;
+    }
+
+    .elPortalLib-wNavigationHeaderTitleLink {
+        text-decoration: none;
+    }
+
+    .elPortalLib-wNavigationHeaderLogo,
+    .elPortalLib-wNavigationHeaderTitle {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .elPortalLib-wNavigationHeaderMenuList {
+        margin: 15px 0 0 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .elPortalLib-wNavigationHeaderMenuList-item {
+        display: inline-block;
+        vertical-align: middle;
+        text-transform: uppercase;
+    }
+
+    .elPortalLib-wNavigationHeaderMenuList-item:after {
+        content: '';
+        width: 2px;
+        height: 1.4rem;
+        margin: 0 15px;
+        background-color: #cccccc;
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    .elPortalLib-wNavigationHeaderMenuList-item:last-child:after {
+        display: none;
+    }
+    </style>
+    <style>.eaPortal-rPortalRegion {
+        position: relative;
+        height: 100%;
+    }
+
+    .eaPortal-rPortalRegion-bannerHolder {
+        width: 970px;
+        padding: 0 5% 30px;
+        margin: 0 auto;
+    }
+
+    .eaPortal-rPortalRegion-tableBg {
+        min-width: 1080px;
+        padding: 0 0 25px;
+        box-sizing: border-box;
+        min-height: calc(100% - 340px);
+        min-height: -webkit-calc(100% - 340px);
+        min-height: -moz-calc(100% - 340px);
+    }
+
+    .eaPortal-rPortalRegion-tableHolder {
+        position: relative;
+        width: 970px;
+        padding: 10px 5% 0;
+        margin: 0 auto;
+    }
+
+    .eaPortal-rPortalRegion-help {
+        background-color: #f1f1f1;
+    }
+
+    .eaPortal-rPortalRegion-helpTopicsList {
+        list-style: none;
+        width: 970px;
+        padding: 30px 5%;
+        margin: 0 auto;
+    }
+
+    .eaPortal-rPortalRegion-helpTopicsItem {
+        display: inline-block;
+        vertical-align: top;
+        padding: 0;
+        padding-left: 80px;
+        margin-right: 20px;
+        box-sizing: border-box;
+        background-size: 100%;
+    }
+
+    .eaPortal-rPortalRegion-helpTopicsItem_forum {
+        width: 30%;
+        background: url('portal/resources/portal/regions/portalregion/discuss_bw.png') no-repeat;
+    }
+
+    .eaPortal-rPortalRegion-helpTopicsItem_ci {
+        width: 25%;
+        background: url('portal/resources/portal/regions/portalregion/ci_bw.png') no-repeat;
+    }
+
+    .eaPortal-rPortalRegion-helpTopicsItem_guidelines {
+        width: 35%;
+        background: url('portal/resources/portal/regions/portalregion/guidelines_bw.png') no-repeat;
+    }
+    </style>
+    <style>.eaPortal-wBannerWow {
+        position: relative;
+        height: 158px;
+    }
+
+    .eaPortal-wBannerWow-top {
+        height: 30px;
+        background: url('portal/resources/portal/widgets/bannerwow/home_top_img.png') no-repeat center;
+    }
+
+    .eaPortal-wBannerWow-wowProcess {
+        position: relative;
+        margin: 0 0 15px 0;
+    }
+
+    .eaPortal-wBannerWow-wowProcessBg {
+        height: 152px;
+        background-repeat: no-repeat;
+    }
+
+    .eaPortal-wBannerWow-wowProcessMap {
+        position: relative;
+        border-radius: 3px;
+        padding: 15px 25px 15px 50px;
+    }
+
+    .eaPortal-wBannerWow-wowProcessMapDocs {
+        background-image: url('portal/resources/portal/linewow/discover.png');
+    }
+
+    .eaPortal-wBannerWow-wowProcessMapDocs_hover {
+        background-image: url('portal/resources/portal/linewow/discover_hover.png');
+    }
+
+    .eaPortal-wBannerWow-wowProcessMapSupport {
+        background-image: url('portal/resources/portal/linewow/discuss.png');
+    }
+
+    .eaPortal-wBannerWow-wowProcessMapSupport_hover {
+        background-image: url('portal/resources/portal/linewow/discuss_hover.png');
+    }
+
+    .eaPortal-wBannerWow-wowProcessMapIssue {
+        background-image: url('portal/resources/portal/linewow/issues.png');
+    }
+
+    .eaPortal-wBannerWow-wowProcessMapIssue_hover {
+        background-image: url('portal/resources/portal/linewow/issues_hover.png');
+    }
+
+    .eaPortal-wBannerWow-wowProcessMapClone {
+        background-image: url('portal/resources/portal/linewow/clone.png');
+    }
+
+    .eaPortal-wBannerWow-wowProcessMapClone_hover {
+        background-image: url('portal/resources/portal/linewow/clone_hover.png');
+    }
+
+    .eaPortal-wBannerWow-wowProcessMapImplement {
+        background-image: url('portal/resources/portal/linewow/implement.png');
+    }
+
+    .eaPortal-wBannerWow-wowProcessMapImplement_hover {
+        background-image: url('portal/resources/portal/linewow/implement_hover.png');
+    }
+
+    .eaPortal-wBannerWow-wowProcessMapSubmit {
+        background-image: url('portal/resources/portal/linewow/submitHome.png');
+    }
+
+    .eaPortal-wBannerWow-wowProcessMapSubmit_hover {
+        background-image: url('portal/resources/portal/linewow/submitHome_hover.png');
+    }
+
+    .eaPortal-wBannerWow-wowProcessMapApprove {
+        background-image: url('portal/resources/portal/linewow/approved.png');
+    }
+
+    .eaPortal-wBannerWow-wowProcessMapCi {
+        background-image: url('portal/resources/portal/linewow/cdsci.png');
+    }
+
+    .eaPortal-wBannerWow-wowProcessMapCi_hover {
+        background-image: url('portal/resources/portal/linewow/cdsci_hover.png');
+    }
+
+    .eaPortal-wBannerWow-wowProcessMapRelease {
+        background-image: url('portal/resources/portal/linewow/release.png');
+    }
+
+    .eaPortal-wBannerWow-wowProcessMapRelease_hover {
+        background-image: url('portal/resources/portal/linewow/release_hover.png');
+    }
+
+    .eaPortal-wBannerWow-wowProcessMapLinks {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    </style>
+    <style>.eaPortal-wMappedArea {
+        position: relative;
+    }
+    </style>
+    <style>.eaPortal-wMappedAreaItem {
+        position: relative;
+        display: inline-block;
+        background-repeat: no-repeat;
+        vertical-align: top;
+    }
+
+    .eaPortal-wMappedAreaItem-link {
+        position: absolute;
+    }
+
+    .eaPortal-wMappedAreaItem-title {
+        position: absolute;
+        top: 95px;
+        font-weight: bold;
+        margin: 0 0 0 5px;
+        text-align: center;
+        width: 75px;
+    }
+
+    .eaPortal-wMappedAreaItem-titleMain {
+        font-size: 1.3rem;
+        margin: 0 0 6px 0;
+    }
+    </style>
+    <style>.eaPortal-wCdsTable {
+        position: relative;
+        background-color: #ffffff;
+        width: 100%;
+    }
+
+    .eaPortal-wCdsTableHeader {
+        height: 40px;
+        color: #ffffff;
+        font-size: 1.2rem;
+        line-height: 4rem;
+    }
+
+    .eaPortal-wCdsTableHeader .eaPortal-wCdsTableCol {
+        background-color: #454545;
+    }
+
+    .eaPortal-wCdsTableHeader .eaPortal-wCdsTableCol-expand {
+        border-radius: 3px 0 0 3px;
+        background-color: #323232;
+    }
+
+    .eaPortal-wCdsTableHeader .eaPortal-wCdsTableCol-name {
+        width: calc(100% - 595px - 32px);
+        font-size: 1.8rem;
+        background: url("portal/resources/portal/widgets/cdstable/headerBgTransition.png") no-repeat right;
+        background-color: #323232;
+    }
+
+    .eaPortal-wCdsTableHeader .eaPortal-wCdsTableCol:last-child {
+        border-radius: 0 3px 3px 0;
+    }
+
+    .eaPortal-wCdsTableRow {
+        position: relative;
+        font-size: 0;
+    }
+
+    .eaPortal-wCdsTableRowStats-item {
+        display: inline-block;
+        margin-left: 25px;
+        margin-bottom: 10px;
+    }
+
+    .eaPortal-wCdsTableRowStats-item:first-of-type {
+        margin-left: 40px;
+    }
+
+    .eaPortal-wCdsTableRowStats-postIcon,
+    .eaPortal-wCdsTableRowStats-contributionIcon,
+    .eaPortal-wCdsTableRowStats-trackerIcon,
+    .eaPortal-wCdsTableRowStats-issueIcon {
+        display: inline-block;
+        vertical-align: top;
+        width: 40px;
+        height: 40px;
+    }
+
+    .eaPortal-wCdsTableRowStats-postIcon {
+        background-image: url('portal/resources/portal/widgets/cdstable/postIcon.svg');
+    }
+
+    .eaPortal-wCdsTableRowStats-contributionIcon {
+        background-image: url('portal/resources/portal/widgets/cdstable/contributorIcon.svg');
+    }
+
+    .eaPortal-wCdsTableRowStats-trackerIcon {
+        background-image: url('portal/resources/portal/widgets/cdstable/doc_views.svg');
+    }
+
+    .eaPortal-wCdsTableRowStats-issueIcon {
+        background-image: url('portal/resources/portal/widgets/cdstable/jira_metric.svg');
+    }
+
+    .eaPortal-wCdsTableRowStats-count {
+        display: block;
+        font-size: 3rem;
+        line-height: 2.5rem;
+    }
+
+    .eaPortal-wCdsTableRowStats-countText {
+        display: inline-block;
+        margin: 0 0 3px;
+    }
+
+    .eaPortal-wCdsTableRowStats-countTextHolder {
+        display: inline-block;
+        margin-right: 6px;
+    }
+
+    .eaPortal-wCdsTableCol {
+        position: relative;
+        display: inline-block;
+        width: 85px;
+        height: inherit;
+        text-align: center;
+        vertical-align: top;
+        font-size: 1.2rem;
+        border-top: 1px solid #cccccc;
+        cursor: default;
+    }
+
+    .eaPortal-wCdsTableCol_arrow {
+        background: url("portal/resources/portal/widgets/cdstable/white_arrow_closed.svg") no-repeat center;
+    }
+
+    .eaPortal-wCdsTableCol_arrow,
+    .eaPortal-wCdsTableCol_arrow_closed {
+        cursor: pointer;
+    }
+
+    .eaPortal-wCdsTableCol_arrow_open {
+        background: url("portal/resources/portal/widgets/cdstable/white_arrow_open.svg") no-repeat center;
+    }
+
+    .eaPortal-wCdsTableCol-expand {
+        height: inherit;
+        width: 32px;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    .eaPortal-wCdsTableCol-name {
+        padding: 0;
+        text-align: left;
+    }
+
+    .eaPortal-wCdsTable-layer .eaPortal-wCdsTableRowHead {
+        height: 44px;
+        font-size: 1.4rem;
+        line-height: 4.4rem;
+        color: #333333;
+        cursor: pointer;
+    }
+
+    .eaPortal-wCdsTable-layer .eaPortal-wCdsTableRowHead .eaPortal-wCdsTableCol {
+        border: none;
+        line-height: inherit;
+    }
+
+    .eaPortal-wCdsTable-layer .eaPortal-wCdsTableRowHead .eaPortal-wCdsTableCol-name {
+        font-size: 1.4rem;
+        width: calc(100% - 595px - 32px);
+    }
+
+    .eaPortal-wCdsTable-layer .eaPortal-wCdsTableRowExpand {
+        display: none;
+        padding: 0 0 0 32px;
+    }
+
+    .eaPortal-wCdsTable-layer .eaPortal-wCdsTableRowExpand .eaPortal-wCdsTableRow_container {
+        color: #333333;
+    }
+
+    .eaPortal-wCdsTable-layer .eaPortal-wCdsTableRowExpand .eaPortal-wCdsTableRow_container > .eaPortal-wCdsTableRowWrap > .eaPortal-wCdsTableCol-name {
+        cursor: pointer;
+    }
+
+    .eaPortal-wCdsTable-layer .eaPortal-wCdsTableRowExpand .eaPortal-wCdsTableCol {
+        line-height: 3.2rem;
+        border-top: 1px solid #cccccc;
+    }
+
+    .eaPortal-wCdsTable-layer .eaPortal-wCdsTableRowExpand .eaPortal-wCdsTableCol-expand {
+        border: none;
+    }
+
+    .eaPortal-wCdsTable-layer .eaPortal-wCdsTableRowExpand .eaPortal-wCdsTableCol_border_none {
+        border: none;
+    }
+
+    .eaPortal-wCdsTable-layer .eaPortal-wCdsTableRowExpand .eaPortal-wCdsTableCol-name {
+        width: calc(100% - 595px);
+    }
+
+    .eaPortal-wCdsTable-layer .eaPortal-wCdsTableRowExpand .eaPortal-wCdsTableCol-name:nth-child(2) {
+        width: calc(100% - 595px - 32px);
+    }
+    </style>
+    <style>.elPortalLib-wStatsCount-item {
+        display: inline-block;
+        margin: 8px 0 8px 16px;
+    }
+
+    .elPortalLib-wStatsCount-item:first-of-type {
+        margin-left: 0;
+    }
+
+    .elPortalLib-wStatsCount-postIcon,
+    .elPortalLib-wStatsCount-contributionIcon,
+    .elPortalLib-wStatsCount-pageViewIcon,
+    .elPortalLib-wStatsCount-issueIcon {
+        width: 40px;
+        height: 40px;
+        vertical-align: top;
+        display: inline-block;
+    }
+
+    .elPortalLib-wStatsCount-postIcon {
+        background-image: url('portallib/1/resources/portallib/statscount/postIcon.svg');
+    }
+
+    .elPortalLib-wStatsCount-contributionIcon {
+        background-image: url('portallib/1/resources/portallib/statscount/contributorIcon.svg');
+    }
+
+    .elPortalLib-wStatsCount-pageViewIcon {
+        background-image: url('portallib/1/resources/portallib/statscount/doc_views.svg');
+    }
+
+    .elPortalLib-wStatsCount-issueIcon {
+        background-image: url('portallib/1/resources/portallib/statscount/jira_metric.svg');
+    }
+
+    .elPortalLib-wStatsCount-count {
+        display: block;
+        font-size: 3rem;
+        line-height: 2.5rem;
+    }
+
+    .elPortalLib-wStatsCount-countText {
+        margin: 0 0 3px;
+        display: inline-block;
+    }
+
+    .elPortalLib-wStatsCount-countTextHolder {
+        margin-left: 6px;
+        display: inline-block;
+    }
+    </style>
+</head>
+<body>
+<!--[if lt IE 9]>
+<p>Browser version not supported, please use Chrome or Internet Explorer 11.</p>
+<!--<![endif]-->
+
+<!--[if IE & lt IE 11]>
+<script type="text/javascript">
+    if (window.location.hash === '') {
+        window.location.hash = 'portal';
+    }
+</script>
+<!--<![endif]-->
+
+<!--[if !IE | gt IE 8]><!-->
+<div class="eaContainer-SystemBarHolder">
+    <div class="eaContainer-SystemBar">
+        <div class="eaContainer-SystemBar-logo"></div>
+        <div class="eaContainer-SystemBar-components">
+            <div class="eaContainer-SystemBar-right">
+                <div style="display: inline-block;">
+                    <div class="eaFlyout" style="display: none;">
+                        <div class="eaFlyout-panel">
+                            <span class="eaFlyout-panelCloseIcon ebIcon ebIcon_circleArrowRight"></span>
+
+                            <h2 class="eaFlyout-panelHeader"></h2>
+
+                            <div class="eaFlyout-panelContents eb_scrollbar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: inline-block;">
+                    <div class="eaLogoutButton" style="display: none;">
+                        <a class="eaLogoutButton-link" href="https://cds.ericsson.se/user/logout/">Logout</a>
+                    </div>
+                </div>
+            </div>
+            <div class="eaContainer-SystemBar-left">
+                <div class="eaContainer-SystemBar-name">CDS</div>
+            </div>
+        </div>
+        <div class="eaContainer-SystemBar-below"></div>
+    </div>
+</div>
+<div class="eaContainer-applicationHolder">
+    <div class="eaPortal">
+        <header class="elPortalLib-wAppLayout">
+            <div class="elPortalLib-wAppLayout-header">
+                <header class="elPortalLib-wNavigationHeader">
+                    <div class="elPortalLib-wNavigationHeader-brandStrip"></div>
+                    <a href="#portal/" class="elPortalLib-wNavigationHeaderTitleLink"><i
+                            class="ebIcon ebIcon_large ebIcon_eLogo elPortalLib-wNavigationHeaderLogo"></i>
+
+                        <h1 class="elPortalLib-wNavigationHeaderTitle ebEricssonFont">Community Developed Software</h1>
+                    </a>
+                    <nav class="elPortalLib-wNavigationHeaderMenu">
+                        <ul class="elPortalLib-wNavigationHeaderMenuList">
+
+                            <li class="elPortalLib-wNavigationHeaderMenuList-item"><a href="#portal/whatiscds/">What is
+                                CDS?</a></li>
+                            <li class="elPortalLib-wNavigationHeaderMenuList-item"><a href="#portal/waysofworking/">Ways
+                                of Working</a></li>
+                            <li class="elPortalLib-wNavigationHeaderMenuList-item">
+                                <a href="http://confluence-oss.lmera.ericsson.se/pages/viewpage.action?title=Welcome+to+the+OSS+Architecture+site&amp;spaceKey=OSSARCH"
+                                   target="_blank">OSS
+                                    Architecture</a></li>
+                            <li class="elPortalLib-wNavigationHeaderMenuList-item"><a href="#portal/help/">Help Desk</a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            <div class="elPortalLib-wAppLayout-bodyHolder">
+                <article class="elPortalLib-wAppLayout-body eb_scrollbar">
+                    <div class="eaPortal-rPortalRegion">
+                        <div class="eaPortal-rPortalRegion-bannerHolder">
+                            <div class="eaPortal-wBannerWow">
+                                <div class="eaPortal-wBannerWow-top"></div>
+
+                                <div class="eaPortal-wBannerWow-wowProcess">
+                                    <div class="eaPortal-wBannerWow-wowProcessMap">
+                                        <div class="eaPortal-wMappedArea">
+                                            <div class="eaPortal-wMappedAreaItem eaPortal-wBannerWow-wowProcessMapDocs"
+                                                 style="height: 103px; width: 100px; background-size: contain;">
+                                                <a class="eaPortal-wMappedAreaItem-link"
+                                                   href="https://confluence-oss.lmera.ericsson.se/display/CDO/Discover"
+                                                   target="_blank"
+                                                   style="top: 6px; left: 6px; height: 60px; width: 60px; border-radius: 30px;"></a>
+
+                                                <div class="eaPortal-wMappedAreaItem-title"
+                                                     style="width: 65px; top: 80px;">
+
+                                                    <div class="eaPortal-wMappedAreaItem-titleMain">Discover</div>
+
+
+                                                    <div class="ebText_alternative">Documentation</div>
+
+                                                </div>
+                                            </div>
+                                            <div class="eaPortal-wMappedAreaItem eaPortal-wBannerWow-wowProcessMapSupport"
+                                                 style="height: 103px; width: 100px; background-size: contain;">
+                                                <a class="eaPortal-wMappedAreaItem-link"
+                                                   href="https://confluence-oss.lmera.ericsson.se/display/CDO/Discuss"
+                                                   target="_blank"
+                                                   style="top: 6px; left: 6px; height: 60px; width: 60px; border-radius: 30px;"></a>
+
+                                                <div class="eaPortal-wMappedAreaItem-title"
+                                                     style="width: 65px; top: 80px;">
+
+                                                    <div class="eaPortal-wMappedAreaItem-titleMain">Discuss</div>
+
+
+                                                    <div class="ebText_alternative">Forums</div>
+
+                                                </div>
+                                            </div>
+                                            <div class="eaPortal-wMappedAreaItem eaPortal-wBannerWow-wowProcessMapIssue"
+                                                 style="height: 103px; width: 100px; background-size: contain;">
+                                                <a class="eaPortal-wMappedAreaItem-link"
+                                                   href="https://confluence-oss.lmera.ericsson.se/display/CDO/Issues"
+                                                   target="_blank"
+                                                   style="top: 6px; left: 6px; height: 60px; width: 60px; border-radius: 30px;"></a>
+
+                                                <div class="eaPortal-wMappedAreaItem-title"
+                                                     style="width: 65px; top: 80px;">
+
+                                                    <div class="eaPortal-wMappedAreaItem-titleMain">Issues</div>
+
+
+                                                    <div class="ebText_alternative">JIRA</div>
+
+                                                </div>
+                                            </div>
+                                            <div class="eaPortal-wMappedAreaItem eaPortal-wBannerWow-wowProcessMapClone"
+                                                 style="height: 103px; width: 100px; background-size: contain;">
+                                                <a class="eaPortal-wMappedAreaItem-link"
+                                                   href="https://confluence-oss.lmera.ericsson.se/display/CDO/Clone"
+                                                   target="_blank"
+                                                   style="top: 6px; left: 6px; height: 60px; width: 60px; border-radius: 30px;"></a>
+
+                                                <div class="eaPortal-wMappedAreaItem-title"
+                                                     style="width: 65px; top: 80px;">
+
+                                                    <div class="eaPortal-wMappedAreaItem-titleMain">Clone</div>
+
+
+                                                    <div class="ebText_alternative">Source Code</div>
+
+                                                </div>
+                                            </div>
+                                            <div class="eaPortal-wMappedAreaItem eaPortal-wBannerWow-wowProcessMapImplement"
+                                                 style="height: 103px; width: 100px; background-size: contain;">
+                                                <a class="eaPortal-wMappedAreaItem-link"
+                                                   href="https://confluence-oss.lmera.ericsson.se/display/CDO/Implement"
+                                                   target="_blank"
+                                                   style="top: 6px; left: 6px; height: 60px; width: 60px; border-radius: 30px;"></a>
+
+                                                <div class="eaPortal-wMappedAreaItem-title"
+                                                     style="width: 65px; top: 80px;">
+
+                                                    <div class="eaPortal-wMappedAreaItem-titleMain">Implement</div>
+
+
+                                                    <div class="ebText_alternative"></div>
+
+                                                </div>
+                                            </div>
+                                            <div class="eaPortal-wMappedAreaItem eaPortal-wBannerWow-wowProcessMapSubmit"
+                                                 style="height: 120px; width: 72px; background-size: contain;">
+                                                <a class="eaPortal-wMappedAreaItem-link"
+                                                   href="https://confluence-oss.lmera.ericsson.se/display/CDO/Submit"
+                                                   target="_blank"
+                                                   style="top: 6px; left: 6px; height: 60px; width: 60px; border-radius: 30px;"></a>
+
+                                                <div class="eaPortal-wMappedAreaItem-title"
+                                                     style="width: 65px; top: 80px;">
+
+                                                    <div class="eaPortal-wMappedAreaItem-titleMain">Submit</div>
+
+
+                                                    <div class="ebText_alternative">Guardian /Jenkins</div>
+
+                                                </div>
+                                            </div>
+                                            <div class="eaPortal-wMappedAreaItem eaPortal-wBannerWow-wowProcessMapApprove eaPortal-wBannerWow-wowProcessMapApprove_disabled"
+                                                 style="height: 89px; width: 120px; background-size: contain;">
+
+
+                                                <div class="eaPortal-wMappedAreaItem-title">
+
+
+                                                    <div class="ebText_alternative"></div>
+
+                                                </div>
+                                            </div>
+                                            <div class="eaPortal-wMappedAreaItem eaPortal-wBannerWow-wowProcessMapCi"
+                                                 style="height: 103px; width: 100px; background-size: contain;">
+                                                <a class="eaPortal-wMappedAreaItem-link"
+                                                   href="https://confluence-oss.lmera.ericsson.se/display/CDO/CDS+CI"
+                                                   target="_blank"
+                                                   style="top: 6px; left: 6px; height: 60px; width: 60px; border-radius: 30px;"></a>
+
+                                                <div class="eaPortal-wMappedAreaItem-title"
+                                                     style="width: 65px; top: 80px;">
+
+                                                    <div class="eaPortal-wMappedAreaItem-titleMain">CDS CI</div>
+
+
+                                                    <div class="ebText_alternative">Jenkins</div>
+
+                                                </div>
+                                            </div>
+                                            <div class="eaPortal-wMappedAreaItem eaPortal-wBannerWow-wowProcessMapRelease"
+                                                 style="height: 120px; width: 72px; background-size: contain;">
+                                                <a class="eaPortal-wMappedAreaItem-link"
+                                                   href="https://confluence-oss.lmera.ericsson.se/display/CDO/Release"
+                                                   target="_blank"
+                                                   style="top: 6px; left: 6px; height: 60px; width: 60px; border-radius: 30px;"></a>
+
+                                                <div class="eaPortal-wMappedAreaItem-title"
+                                                     style="width: 65px; top: 80px;">
+
+                                                    <div class="eaPortal-wMappedAreaItem-titleMain">Release</div>
+
+
+                                                    <div class="ebText_alternative"></div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="eaPortal-rPortalRegion-tableBg">
+                            <div class="eaPortal-rPortalRegion-tableHolder">
+                                <div class="eaPortal-wCdsTable">
+                                    <header class="eaPortal-wCdsTableRow eaPortal-wCdsTableHeader">
+                                        <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand eaPortal-wCdsTableCol_arrow"></div>
+                                        <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">AIA Architecture
+                                            Layers
+                                        </div>
+                                        <div class="eaPortal-wCdsTableCol">Discover</div>
+                                        <div class="eaPortal-wCdsTableCol">Discuss</div>
+                                        <div class="eaPortal-wCdsTableCol">Issues</div>
+                                        <div class="eaPortal-wCdsTableCol">Clone</div>
+                                        <div class="eaPortal-wCdsTableCol">Submit</div>
+                                        <div class="eaPortal-wCdsTableCol">CDS CI</div>
+                                        <div class="eaPortal-wCdsTableCol">Release</div>
+                                    </header>
+                                    <section class="eaPortal-wCdsTable-layer" style="border-bottom: 3px solid #b06aa1">
+                                        <div class="eaPortal-wCdsTableRowHead">
+                                            <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"><i
+                                                    class="ebIcon eaPortal-wCdsTable-layerExpand ebIcon_rightArrow"></i>
+                                            </div>
+                                            <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">Presentation
+                                                Layer
+                                            </div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                        </div>
+                                        <div class="eaPortal-wCdsTableRowExpand">
+                                            <div class="eaPortal-wCdsTableRow eaPortal-wCdsTableRow_container">
+
+
+                                                <div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"></div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">Grafana</div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="http://docs.grafana.org/" target="_blank">Dev Guide</a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="/#todo" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="legacy/dist/grafana.zip" target="_blank">Release</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="eaPortal-wCdsTable-layer" style="border-bottom: 3px solid #66a19f">
+                                        <div class="eaPortal-wCdsTableRowHead">
+                                            <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"><i
+                                                    class="ebIcon eaPortal-wCdsTable-layerExpand ebIcon_rightArrow"></i>
+                                            </div>
+                                            <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">Service Layer
+                                            </div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                        </div>
+                                        <div class="eaPortal-wCdsTableRowExpand">
+                                            <div class="eaPortal-wCdsTableRow ">
+                                                <div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"></div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">Spark</div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="http://spark.apache.org/docs/latest/api.html" target="_blank">Dev Guide</a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="http://jira-nam.lmera.ericsson.se/browse/OSSBSS" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="https://gerrit.ericsson.se/#/admin/projects/AIA/containers/docker/spark" target="_blank">Clone</a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="/#todo" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="legacy/dist/spark.zip" target="_blank">Release</a>
+                                                    </div>
+                                                  </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="eaPortal-wCdsTable-layer" style="border-bottom: 3px solid #66cbe5">
+                                        <div class="eaPortal-wCdsTableRowHead">
+                                            <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"><i
+                                                    class="ebIcon eaPortal-wCdsTable-layerExpand ebIcon_rightArrow"></i>
+                                            </div>
+                                            <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">Data Layer
+                                            </div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                        </div>
+                                        <div class="eaPortal-wCdsTableRowExpand">
+                                            <div class="eaPortal-wCdsTableRow eaPortal-wCdsTableRow_container">
+
+                                                <div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"></div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">Kafka</div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="http://kafka.apache.org/documentation.html" target="_blank">Dev Guide</a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="http://jira-nam.lmera.ericsson.se/browse/OSSBSS" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="https://gerrit.ericsson.se/#/admin/projects/AIA/containers/docker/kafka" target="_blank">Clone</a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="/#todo" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="legacy/dist/kafka.zip" target="_blank">Release</a>
+                                                    </div>
+                                                </div>
+
+
+                                                <div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"></div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">Alluxio</div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="http://www.alluxio.org/documentation/en/File-System-API.html" target="_blank">Dev Guide</a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="http://jira-nam.lmera.ericsson.se/browse/OSSBSS" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="https://gerrit.ericsson.se/#/admin/projects/AIA/containers/docker/alluxio" target="_blank">Clone</a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="/#todo" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="legacy/dist/alluxio.zip" target="_blank">Release</a>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"></div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">Streaming Kafka Daemon</div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="/#todo" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="legacy/dist/streaming-kafka-d.zip" target="_blank">Release</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="eaPortal-wCdsTable-layer" style="border-bottom: 3px solid #a1c845">
+                                        <div class="eaPortal-wCdsTableRowHead">
+                                            <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"><i
+                                                    class="ebIcon eaPortal-wCdsTable-layerExpand ebIcon_rightArrow"></i>
+                                            </div>
+                                            <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">Mediation
+                                                Layer
+                                            </div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                        </div>
+                                        <div class="eaPortal-wCdsTableRowExpand">
+                                            <div class="eaPortal-wCdsTableRow ">
+
+
+                                                <div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"></div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">Mesos Collector</div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="/#todo" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="legacy/dist/mesos-collector.zip" target="_blank">Release</a>
+                                                    </div>
+                                                </div>
+
+
+                                                <div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"></div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">Terminator Standalone</div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="/#todo" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="legacy/dist/terminator-standalone.zip" target="_blank">Release</a>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"></div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">EPS Parser</div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="/#todo" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="legacy/dist/eps-parser.zip" target="_blank">Release</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="eaPortal-wCdsTable-layer" style="border-bottom: 3px solid #fbc933">
+                                        <div class="eaPortal-wCdsTableRowHead">
+                                            <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"><i
+                                                    class="ebIcon eaPortal-wCdsTable-layerExpand ebIcon_rightArrow"></i>
+                                            </div>
+                                            <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">SDK
+                                            </div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                        </div>
+                                        <div class="eaPortal-wCdsTableRowExpand">
+                                            <div class="eaPortal-wCdsTableRow ">
+                                                <div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"></div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">Schema Registry</div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="http://docs.confluent.io/1.0/schema-registry/docs/api.html" target="_blank">Dev Guide</a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="/#todo" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="https://gerrit.ericsson.se/#/admin/projects/AIA/containers/docker/schemaregistery" target="_blank">Clone</a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="legacy/dist/schema-registry.zip" target="_blank">Release</a>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"></div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">Schema Registry Client</div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="schema-registry-client/index.html" target="_blank">Dev Guide</a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="http://jira-nam.lmera.ericsson.se/browse/OSSBSS" target="_blank">Jira</a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="https://gerrit.ericsson.se/#/admin/projects/AIA/model/schema-registry-client" target="_blank">Clone</a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="schema-registry-client/release-notes.html">Release</a>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"></div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">GMetrics</div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="/#todo" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="legacy/dist/gmetrics.zip" target="_blank">Release</a>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"></div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">S3</div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="/#todo" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="legacy/dist/s3.zip" target="_blank">Release</a>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"></div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">S3 ctr</div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="/#todo" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="legacy/dist/s3-ctr.zip" target="_blank">Release</a>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"></div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">S3 Daemon</div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="/#todo" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="legacy/dist/s3-d.zip" target="_blank">Release</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="eaPortal-wCdsTable-layer" style="border-bottom: 3px solid #f3a133">
+                                        <div class="eaPortal-wCdsTableRowHead">
+                                            <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"><i
+                                                    class="ebIcon eaPortal-wCdsTable-layerExpand ebIcon_rightArrow"></i>
+                                            </div>
+                                            <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">Applications
+                                            </div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                            <div class="eaPortal-wCdsTableCol">
+                                                <a href="/paas-ui/index.html#home/create-app">
+                                                    <img src="portal/create-app-icon.png"
+                                                         title="create application from template"
+                                                         style="float:right;padding-top:3px;"/>
+                                                </a></div>
+                                            <div class="eaPortal-wCdsTableCol"></div>
+                                        </div>
+                                        <div class="eaPortal-wCdsTableRowExpand">
+                                            <div class="eaPortal-wCdsTableRow">
+
+                                                <div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"></div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">CALL DROP</div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="download/avro_schemas/correlation.v1.v1/CONTEXT_RELEASE.avsc"  target="_blank" download="avro_schemas/correlation.v1.v1/CONTEXT_RELEASE.avsc">tachyon:/CONTEXT_RELEASE</a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="/#todo" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"></div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">INITIAL_ATTACH</div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="download/avro_schemas/correlation.v1.v1/INITIAL_ATTACH.avsc" target="_blank" download="avro_schemas/correlation.v1.v1/INITIAL_ATTACH.avsc">tachyon:/INITIAL_ATTACH</a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="/#todo" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"></div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">LTE_CALL_SETUP_FAILURE</div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="download/avro_schemas/correlation.v1.v1/LTE_CALL_SETUP_FAILURE.avsc" target="_blank" download="avro_schemas/correlation.v1.v1/LTE_CALL_SETUP_FAILURE.avsc">tachyon:/LTE_CALL_SETUP_FAILURE</a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="/#todo" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"></div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">LTE_ERAB_SESSION</div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="download/avro_schemas/correlation.v1.v1/LTE_ERAB_SESSION.avsc" target="_blank" download="avro_schemas/correlation.v1.v1/LTE_ERAB_SESSION.avsc">tachyon:/LTE_ERAB_SESSION</a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="/#todo" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"></div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">LTE RADIO USER SESSION</div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="download/avro_schemas/correlation.v1.v1/LTE_USER_SESSION.avsc" target="_blank" download="avro_schemas/correlation.v1.v1/LTE_USER_SESSION.avsc">tachyon:/LTE_USER_SESSION</a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="/#todo" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"></div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">LTE PAGING</div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="download/avro_schemas/correlation.v1.v1/NET_TG_SERVICE_REQUEST_CORR.avsc" target="_blank" download="avro_schemas/correlation.v1.v1/NET_TG_SERVICE_REQUEST_CORR.avsc">tachyon:/NET_TG_SERVICE_REQUEST_CORR</a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="/#todo" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"></div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">LTE S1 HANDOVER</div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="download/avro_schemas/correlation.v1.v1/S1_HANDOVER.avsc" target="_blank" download="avro_schemas/correlation.v1.v1/S1_HANDOVER.avsc">tachyon:/S1_HANDOVER</a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="/#todo" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"></div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">LTE SERVICE REQUEST</div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="download/avro_schemas/correlation.v1.v1/SERVICE_REQUEST_CORR.avsc" target="_blank" download="avro_schemas/correlation.v1.v1/SERVICE_REQUEST_CORR.avsc">tachyon:/SERVICE_REQUEST_CORR</a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="/#todo" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand"></div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">LTE X2 HANDOVER</div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="download/avro_schemas/correlation.v1.v1/X2_HANDOVER.avsc" target="_blank" download="avro_schemas/correlation.v1.v1/X2_HANDOVER.avsc">tachyon:/X2_HANDOVER</a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="/#todo" target="_blank"></a>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                        <a href="" target="_blank"></a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="eaPortal-wCdsTableRow applicationsHolder">
+
+                                            </div>
+                                            <div class="eaPortal-wCdsTableRow eaPortal-wCdsTableRow_container">
+                                                <div class="eaPortal-wCdsTableRowWrap">
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand ">
+                                                        <i class="ebIcon eaPortal-wCdsTable-compExpand ebIcon_rightArrow"></i>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">
+
+                                                        <span>Integration Points</span>
+
+                                                    </div>
+
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+
+                                                </div>
+                                                <section class="eaPortal-wCdsTableRowExpand integrationsHolder">
+                                                </section>
+                                            </div>
+                                            <div class="eaPortal-wCdsTableRow eaPortal-wCdsTableRow_container">
+                                                <div class="eaPortal-wCdsTableRowWrap">
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand ">
+                                                        <i class="ebIcon eaPortal-wCdsTable-compExpand ebIcon_rightArrow"></i>
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">
+
+                                                        <span>Extension Points</span>
+
+                                                    </div>
+
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+                                                    <div class="eaPortal-wCdsTableCol"></div>
+
+                                                </div>
+                                                <section class="eaPortal-wCdsTableRowExpand extensionsHolder">
+                                                </section>
+                                            </div>
+
+                                            <div class="eaPortal-wCdsTableRow ">
+                                                <div class="eaPortal-wCdsTableRowWrap">
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-expand eaPortal-wCdsTableCol_border_none">
+
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol eaPortal-wCdsTableCol-name">
+
+                                                        <a href="index-sprint-1.html"
+                                                           title="Mediation SDK">Legacy Applications (links from sprint-1)</a>
+
+                                                    </div>
+
+                                                    <div class="eaPortal-wCdsTableCol">
+
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+
+                                                    </div>
+                                                    <div class="eaPortal-wCdsTableCol">
+
+                                                    </div>
+
+                                                </div>
+                                                <section class="eaPortal-wCdsTableRowExpand"></section>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="eaPortal-rPortalRegion-help">
+                            <ul class="eaPortal-rPortalRegion-helpTopicsList">
+                                <li class="eaPortal-rPortalRegion-helpTopicsItem eaPortal-rPortalRegion-helpTopicsItem_forum">
+                                    <h4 class="eaPortal-rPortalRegion-helpTopicsItemHeading">Component Support
+                                        Forums</h4>
+                                    <div class="ebText">
+                                        Find the individual component forums on the
+                                        <a href="https://confluence-oss.lmera.ericsson.se/display/CDO/Forums+Overviews"
+                                           target="_blank">Forums Overview</a>
+                                    </div>
+                                </li>
+                                <li class="eaPortal-rPortalRegion-helpTopicsItem eaPortal-rPortalRegion-helpTopicsItem_ci">
+                                    <h4 class="eaPortal-rPortalRegion-helpTopicsItemHeading">Gerrit &amp; Jenkins
+                                        Support</h4>
+                                    <div class="ebText"><a
+                                            href="https://confluence-oss.lmera.ericsson.se/display/CDO/Cheat+Sheet"
+                                            target="_blank">Gerrit cheatsheet</a></div>
+                                    <div class="ebText"><a
+                                            href="https://confluence-oss.lmera.ericsson.se/display/CDO/Jenkins"
+                                            target="_blank">Jenkins ways of working</a></div>
+                                </li>
+                                <li class="eaPortal-rPortalRegion-helpTopicsItem eaPortal-rPortalRegion-helpTopicsItem_guidelines">
+                                    <h4 class="eaPortal-rPortalRegion-helpTopicsItemHeading">Coding Conventions &amp;
+                                        Guidelines</h4>
+                                    <div class="ebText">
+                                        Read the recommended
+                                        <a href="https://confluence-oss.lmera.ericsson.se/display/CDO/Coding+Conventions+and+Best+Practices"
+                                           target="_blank">programming styles, practices and methods</a> for each
+                                        major language used in the YMER components.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </header>
+    </div>
+</div>
+
+
+<!--<![endif]-->
+
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script src="portal/static.js"></script>
+
+</body>
+</html>

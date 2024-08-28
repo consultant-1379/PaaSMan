@@ -1,0 +1,12 @@
+server.tomcat.accesslog.directory: ${user.dir}/target
+store.maven.local-dir: ${user.dir}/target/maven-store/
+gateway:
+#  cdsv3.url: http://analytics.ericsson.se
+  cdsv3.url: http://atrcxb2994.athtem.eei.ericsson.se:8889
+  url: http://${gateway.host}:${server.port}
+paas:
+  url: http://${paas.host}:${server.port}
+  application.generator.dir: ${user.dir}/target/generated-applications/
+#  marathon.url: http://atrcxb2560-1.athtem.eei.ericsson.se:18080/v2
+#  marathon.url: http://192.168.99.100:18080/v2
+  marathon.url: http://atrcxb2994.athtem.eei.ericsson.se:18080

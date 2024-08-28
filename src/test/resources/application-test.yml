@@ -1,0 +1,6 @@
+server.port: 18888
+gateway:
+  host: localhost
+  static.resource.path: target/test-classes/ui-override/
+logging.level.org.apache.http.headers: DEBUG
+test.store.maven.test.artifact.dir: ${store.maven.local-dir}com/ericsson/aia/model/schema-registry-client

@@ -1,0 +1,6 @@
+store.maven.preload-packages:
+  - com/ericsson/aia/paas/applications
+  - com/ericsson/aia/paas/templates
+paas:
+  application.generator.dir: /data/aia-sdk-paas-manager/generated-applications/
+  marathon.url: http://${paas.host}:18080
